@@ -17,7 +17,7 @@ Contents:
  4. How should I use it?
  5. Where can I get tutorials or documentation for SJGS?
  6. How do I play sound in SJGS?
- AAA. How can I contribute to SJGS?
+ 999. How can I contribute to SJGS?
 
 --------------------------------------------------------------------------------------
 
@@ -66,11 +66,11 @@ from media loading and management, physics, input, game loops, window
 6) *How can I play sound in SJGS?*
 
 > Please include [**JMP3**](https://github.com/MitchWeaver/jmp3) inside your project for this functionality, (made by the same developer).
-> SJGS does not come with any sound support native, as all this functionality is provided
-> by JMP3.
+
+> SJGS does not come with any sound support native, as this is provided in JMP3.
 
 
-AAA) *How can I contribute to SJGS?*
+999) *How can I contribute to SJGS?*
 
 > [Pull requests](https://help.github.com/articles/using-pull-requests) are always welcome!
 
