@@ -36,7 +36,7 @@ from media loading and management, physics, input, game loops, window
 
 2) *What are its components and dependencies?*
 
-> SJGS is written in both Java and Jython, which means it will require the standalone Jython .jar to function. For sound, SJGS uses JLayer to play .mp3 files, so JLayer is a requirement as well. The JLayer .jar packaged with SJGS is special however, as it is **modified to accept sound gain, pausing, and stopping** where the official JLayer does not. You will need to include both of these .jars along with SJGS's .jar in your project's build path in order to use SJGS.
+> SJGS is written in both Java and Jython, which means it will require the standalone Jython .jar to function. You will need to include this .jar along with SJGS's .jar in your project's build path in order to use SJGS. If you want sound in your project, you will also need to include a copy of JMP3 as described below.
 
 3) *What are its licenses?*
 
@@ -63,7 +63,7 @@ from media loading and management, physics, input, game loops, window
 
 > TBA --- video tutorials are pending
 
-6) *How can I play sound in SJGS?*
+6) *How do I play sound in SJGS?*
 
 > Please include [**JMP3**](https://github.com/MitchWeaver/jmp3) inside your project for this functionality, (made by the same developer).
 
