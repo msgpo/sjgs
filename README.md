@@ -16,7 +16,8 @@ Contents:
  3. What are its licenses?
  4. How should I use it?
  5. Where can I get tutorials or documentation for SJGS?
- 6. How can I contribute to SJGS?
+ 6. How do I play sound in SJGS?
+ AAA. How can I contribute to SJGS?
 
 --------------------------------------------------------------------------------------
 
@@ -43,8 +44,6 @@ from media loading and management, physics, input, game loops, window
 
 > **SJGS** is licensed under [**LGPL 3.0**](https://opensource.org/licenses/LGPL-3.0)
 
-> **JLayer** is licensed under [**LGPL 3.0**](https://opensource.org/licenses/LGPL-3.0)
-
 > **Jython** is licensed under its [**own license**](http://www.jython.org/license.html)
 
 3.1) *I don't know what those mean, can I use it for my commercial project?*
@@ -64,6 +63,14 @@ from media loading and management, physics, input, game loops, window
 
 > TBA --- video tutorials are pending
 
-6) *How can I contribute to SJGS?*
+6) *How can I play sound in SJGS?*
+
+> Please include [**JMP3**](https://github.com/MitchWeaver/jmp3) inside your project for this functionality, (made by the same developer).
+> SJGS does not come with any sound support native, as all this functionality is provided
+> by JMP3.
+
+
+AAA) *How can I contribute to SJGS?*
 
 > [Pull requests](https://help.github.com/articles/using-pull-requests) are always welcome!
+
