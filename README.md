@@ -44,6 +44,8 @@ from media loading and management, physics, input, game loops, window
 
 > **SJGS** is licensed under [**LGPL 3.0**](https://opensource.org/licenses/LGPL-3.0)
 
+> **JMP3** is licensed under [**LGPL 3.0**](https://opensource.org/licenses/LGPL-3.0)
+
 > **Jython** is licensed under its [**own license**](http://www.jython.org/license.html)
 
 3.1) *I don't know what those mean, can I use it for my commercial project?*
