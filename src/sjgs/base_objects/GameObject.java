@@ -111,8 +111,8 @@ public abstract class GameObject implements Serializable {
 	public boolean facingRight() { return bounds.facingRight(); }
 	public void setFacing(final Facing facing) { bounds.setFacing(facing); }
 	public Type getType() { return bounds.getType(); }
-	
-	public PyFunction createPyFunction(String funcName) { return PyUtils.createPyFunction(funcName); }
+
+	public PyFunction createPyFunction(final String funcName) { return PyUtils.createPyFunction(funcName); }
 
 	public Point2f getTopRight() { return getBounds().getTopRight(); }
 	public Point2f getTopLeft() { return getBounds().getTopLeft(); }

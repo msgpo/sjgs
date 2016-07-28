@@ -1,5 +1,6 @@
 package sjgs.utils.multithreading;
 
+
 public class Runner extends Thread {
 
 	private final Executable e;

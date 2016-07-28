@@ -24,7 +24,7 @@ import sjgs.utils.tools.Timer;
 class __PhysicsDemonstration extends Engine {
 
 	public __PhysicsDemonstration(final int WIDTH, final int HEIGHT, final String title) { super(WIDTH, HEIGHT, title); }
-	
+
 	public static void main(final String[] args) {
 		engine = new __PhysicsDemonstration(1280, 720, "Physics Demonstration");
 	}

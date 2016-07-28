@@ -3,9 +3,9 @@
 
 **Author - Mitch Weaver 2016**
 
-*Support SJGS - Paypal:* **simplejavagamesystem@gmail.com**
+*Support / Contact SJGS - Paypal / Email:* **simplejavagamesystem@gmail.com**
 
-###### *VERSION 1.0*
+*SJGS ver1.0*
 
 --------------------------------------------------------------------------------------
 

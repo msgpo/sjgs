@@ -25,8 +25,8 @@ public class PyUtils {
 		Jython.pi.execfile(filename);
 		try { in.close(); in = null; } catch (final Exception e) { e.printStackTrace(); }
 	}
-	
-	public static PyFunction createPyFunction(String funcName) { return pi.get(funcName, PyFunction.class); }
+
+	public static PyFunction createPyFunction(final String funcName) { return pi.get(funcName, PyFunction.class); }
 
 	public static PyObject java2py(final Object o)   { return Py.java2py(o);    }
 	public static PyInteger int2py(final int i)      { return new PyInteger(i); }

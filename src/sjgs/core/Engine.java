@@ -37,7 +37,7 @@ public abstract class Engine extends Canvas implements Runnable, Serializable {
 	public final JFrame frame;
 	public final JPanel panel;
 	public final Camera camera;
-	
+
 	public final PyObject self;
 
 	public Engine(final int WIDTH, final int HEIGHT, final String title) {
@@ -55,13 +55,13 @@ public abstract class Engine extends Canvas implements Runnable, Serializable {
 		}).run();
 
 		new Jython().__init__();
-		
+
 		createWindow(WIDTH, HEIGHT, title);
 
 		camera = new Camera(this);
 
 		init();
-		
+
 		self = java2py(this);
 
 		pool.runTask(this);

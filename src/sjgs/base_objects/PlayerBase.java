@@ -34,9 +34,9 @@ public abstract class PlayerBase extends GameObject implements Serializable {
 	@Override
 	protected void removeFromHandler() { Handler.removePlayer(this); }
 
-	public void setLookingUp(boolean b) { this.lookingUp = b; }
+	public void setLookingUp(final boolean b) { lookingUp = b; }
 	public boolean getLookingUp() { return lookingUp; }
-	public void setLookingDown(boolean b) { this.lookingDown = b; }
+	public void setLookingDown(final boolean b) { lookingDown = b; }
 	public boolean getLookingDown() { return lookingDown; }
 	public void setJumping(final boolean jumping) { this.jumping = jumping; }
 	public boolean getJumping() { return jumping; }
