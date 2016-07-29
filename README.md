@@ -2,7 +2,7 @@
 
 **Author - Mitch Weaver 2016**
 
-*Support / Contact SJGS - Paypal / Email:* **simplejavagamesystem@gmail.com**
+*Contact email:* **simplejavagamesystem@gmail.com**
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8MT6S5NE7BYGW&lc=US&item_name=Simple%20Java%20Game%20System&amount=5%2e00&currency_code=USD&bn=PP%2dDonationsBF%3aDonate%2dPayPal%2dgreen%2esvg%3aNonHosted)
 
