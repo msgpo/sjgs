@@ -1,5 +1,4 @@
-# sjgs
---- Simple Java Game System ---
+# Simple Java Game System
 
 **Author - Mitch Weaver 2016**
 
