@@ -60,10 +60,10 @@ class __PhysicsDemonstration extends Engine {
 		for(int row = 1; row < map.length+1; row++)
 			for(int col = 1; col < level_width+1; col++)
 				switch(map[row-1].charAt(col-1)) {
-				case 't': new ExampleTile(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE, 0, 0); break;
-				case 'l': new ExampleTile(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE, 100, 0); break;
-				case 'r': new ExampleTile(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE, 0, 100 ); break;
-				case 'p': player = new ExamplePlayer(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE*1.5f); break;
+					case 't': new ExampleTile(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE, 0, 0); break;
+					case 'l': new ExampleTile(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE, 100, 0); break;
+					case 'r': new ExampleTile(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE, 0, 100 ); break;
+					case 'p': player = new ExamplePlayer(TILE_SIZE*col, TILE_SIZE*row, TILE_SIZE, TILE_SIZE*1.5f); break;
 				}
 	}
 

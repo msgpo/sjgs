@@ -18,7 +18,10 @@ from sjgs.graphics import Colors
 
 from sjgs.base_objects import *
 
-import sjgs.sound.SoundPlayer as SoundPlayer
+# NOTE: this is deprecated due to moving sound to JMP3 versus inside SJGS.
+#### In order to use JMP3 inside of SJGS you will need to import the classes inside
+####     of your project.
+#import sjgs.sound.SoundPlayer as SoundPlayer
 
 import sjgs.physics.Physics as Physics
 import sjgs.physics.structs.BoundingBox as BoundingBox 
