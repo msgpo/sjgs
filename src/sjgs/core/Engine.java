@@ -21,7 +21,7 @@ import sjgs.utils.multithreading.ThreadPool;
 
 public abstract class Engine extends Canvas implements Runnable, Serializable {
 
-	private static final String engine_version = "SJGS v0.0.12";
+	private static final String engine_version = "SJGS v0.0.13 - Jan 17, 2017";
 
 	/** @TICK_INTERVAL && @FPS_CAP: default no arg constructor gives 60 tps / fps */
 	private double TICK_INTERVAL;
@@ -36,35 +36,41 @@ public abstract class Engine extends Canvas implements Runnable, Serializable {
 	public final ThreadPool pool;
 	public final JFrame frame;
 	public final JPanel panel;
-	public final Camera camera;
 
 	public final PyObject self;
 
 	public Engine(final int WIDTH, final int HEIGHT, final String title) {
+		error(getVersion() + "\n" + Utils.OS + "\n" + "-----------------------------");
+
 		pool = new ThreadPool();
 		frame = new JFrame();
 		panel = new JPanel();
-
-		new Runner(() ->  {
-			new Runner(() ->  { new Physics().init();     }).run();
-			new Runner(() ->  { new Handler().init();     }).run();
-			setFPS_CAP(60.0d);
-			TICK_INTERVAL = Utils.second / 60.0d;
-			error(getVersion() + "\n" + Utils.OS);
-			toggleDrawFPS();
-		}).run();
-
-		new Jython().__init__();
-
-		createWindow(WIDTH, HEIGHT, title);
-
-		camera = new Camera(this);
-
-		init();
-
 		self = java2py(this);
 
+		Utils.print("Objects initialized.");
+		
+		setFPS_CAP(60.0d);
+		TICK_INTERVAL = Utils.second / 60.0d;
+		toggleDrawFPS();
+		createWindow(WIDTH, HEIGHT, title);
+		Utils.print("Game window created.");
+		
+		new Physics().init();    
+		Utils.print("Physics initialized.");
+		
+		new Handler().init();   
+		Utils.print("Handler initialized.");
+		
+		new Jython().__init__(); 
+		Utils.print("Jython scripting initialized.");
+		
+		init();
+		
 		pool.runTask(this);
+		
+		Utils.print("Game engine starting...");
+
+		error("-----------------------------");
 	}
 
 	private void createWindow(final int WIDTH, final int HEIGHT, final String title) {
@@ -89,6 +95,7 @@ public abstract class Engine extends Canvas implements Runnable, Serializable {
 	private boolean drawFPS, rendering;
 	private BufferStrategy bs; private Graphics g; private Graphics2D g2d;
 	public void engine_render() {
+		if(rendering) return;
 		begin();
 		drawBaseLayer();
 		scale();
@@ -111,6 +118,7 @@ public abstract class Engine extends Canvas implements Runnable, Serializable {
 		DeveloperConsole.render(consoleRenderer, getWidth(), getHeight());
 	}
 	private void begin() {
+		rendering = true;
 		if (bs == null) createBufferStrategy(3);
 		bs = getBufferStrategy();
 		if (bs.getDrawGraphics() != null) g = bs.getDrawGraphics();
@@ -173,7 +181,6 @@ public abstract class Engine extends Canvas implements Runnable, Serializable {
 				if(multithreadedRendering) pool.runTask(renderer);
 				else { engine_render(); frames++; }
 				frameThen = now;
-				rendering = true;
 			}
 
 			// UPDATE FRAMES PER SECOND

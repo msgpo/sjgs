@@ -26,6 +26,7 @@ public class Camera { //TODO: camera acceleartion / delay and shake
 	}
 
 	public void tick(final Point2f target, final double scaleFactor) {
+		
 		final float w = (float)(getWidth() / scaleFactor);
 		final float h = (float)(getHeight() / scaleFactor);
 		final float hw = w * 0.5f;
@@ -53,10 +54,7 @@ public class Camera { //TODO: camera acceleartion / delay and shake
 
 				if(getY() != tY) speedY = cinch(speedY + acceleration, maxSpeed);
 				else speedY = 0;
-			}
-
-
-			// ELSE IF WE *ARE* SHAKING
+			} // ELSE IF WE *ARE* SHAKING
 		} else {
 			if(shakeIndex >= shakePoints.length - 1) shakePoints = null;
 			proposedX = shakePoints[shakeIndex].x;

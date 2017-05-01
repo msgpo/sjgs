@@ -9,6 +9,7 @@ import sjgs.base_objects.BaseTile;
 import sjgs.base_objects.Bullet;
 import sjgs.base_objects.HardObject;
 import sjgs.base_objects.PlayerBase;
+import sjgs.core.Camera;
 import sjgs.core.DeveloperConsole;
 import sjgs.core.Engine;
 import sjgs.core.Handler;
@@ -31,11 +32,13 @@ class __PhysicsDemonstration extends Engine {
 
 	public static __PhysicsDemonstration engine;
 	public static ExamplePlayer player;
-
+	public static Camera camera;
+	
 	@Override
 	protected void init() {
-		//		disableFpsCap();
+		disableFpsCap();
 		setDoubleTickRate();
+		camera = new Camera(this);
 		new ExampleDevConsole(this);
 		new ExampleMouseInput(this);
 		generateWorld();
@@ -72,9 +75,11 @@ class __PhysicsDemonstration extends Engine {
 		try {
 			if(DeveloperConsole.CONSOLE_OPEN) return;
 			ExampleKeyInput.tick(player);
-			camera.tick(player.getCenter(), getScaleFactor());
 			Handler.tick(camera, getScaleFactor());
-		} catch (final NullPointerException npe) { }
+			camera.tick(player.getCenter(), getScaleFactor());
+		} catch (final NullPointerException npe) { 
+			System.out.println("null pointer caught in tick()");
+		}
 	}
 	@Override
 	protected void render(Graphics2D g2d) {
