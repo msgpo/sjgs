@@ -22,6 +22,8 @@ class __InventoryExample extends Engine {
 		super(WIDTH, HEIGHT, title);
 	}
 
+    private static int WIDTH=800;
+    private static int HEIGHT=600;
 	// Create our engine!
 	private static __InventoryExample engine;
 	// Create our inventory!
@@ -29,7 +31,7 @@ class __InventoryExample extends Engine {
 
 	// Create the window for our engine, and initialize our engine itself while we're here.
 	public static void main(final String[] args) {
-		engine = new __InventoryExample(800, 600, "Inventory System Demonstration");
+		engine = new __InventoryExample(WIDTH, HEIGHT, "Inventory System Demonstration");
 	}
 
 	// Create our mouse input, which will also add itself to our engine that we're passing in.
@@ -96,8 +98,9 @@ class __InventoryExample extends Engine {
 		@Override
 		public void init() {
 			final int w = 50, h = 50;
-			for(int i = 1; i < 6; i++) slots.add(new ExampleInventorySlot(engine.getWidth() * 0.3f, engine.getHeight()*0.1f + i*h, w, h, i - 1));
-			for(int i = 1; i < 6; i++) slots.add(new ExampleInventorySlot(engine.getWidth() * 0.6f, engine.getHeight()*0.1f + i*h, w, h, i - 1));
+			
+			for(int i = 1; i < 6; i++) slots.add(new ExampleInventorySlot(WIDTH * 0.3f, HEIGHT*0.1f + i*h, w, h, i - 1));
+			for(int i = 1; i < 6; i++) slots.add(new ExampleInventorySlot(WIDTH * 0.6f, HEIGHT*0.1f + i*h, w, h, i - 1));
 
 			// And fill them with random items
 			for(int i = 0; i < 10; i++) addItem(rand.nextInt(4));

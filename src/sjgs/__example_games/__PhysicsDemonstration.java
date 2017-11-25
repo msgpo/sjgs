@@ -36,8 +36,8 @@ class __PhysicsDemonstration extends Engine {
 	
 	@Override
 	protected void init() {
-		disableFpsCap();
-		setDoubleTickRate();
+		//disableFpsCap();
+		//setDoubleTickRate();
 		camera = new Camera(this);
 		new ExampleDevConsole(this);
 		new ExampleMouseInput(this);

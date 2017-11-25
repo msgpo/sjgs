@@ -8,7 +8,7 @@ def __engine_onLeftClick(inventory):
         for e in inventory.getSlots():
             # IF THE SECOND SLOT CONTAINS THE MOUSE POINTER, SWAP!
             if i != e and e.bounds.contains(Mouse.getClickX(), Mouse.getClickY()):
-                inventory.swap(i, e)
+                inventory.swapSlots(i, e)
                 return # NOTE: YOU MUST RETURN HERE OR IT WONT WORK!
 
     # GRAPHICAL SLOT MOVING!
