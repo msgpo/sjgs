@@ -3,7 +3,7 @@
 **Author - Mitch Weaver 2016**
 
 
-# NOTE: SJGS development has been discontinued since 2016
+*NOTE:* SJGS development has been discontinued since 2016
 
 -------------------------------------------------------------------------------
 
