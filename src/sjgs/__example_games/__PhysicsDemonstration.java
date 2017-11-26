@@ -249,9 +249,9 @@ class __PhysicsDemonstration extends Engine {
 			if(Keyboard.D()) { player.setVelX(walkingVelocity); player.setFacing(Facing.RIGHT); }
 			else if(Keyboard.A()) { player.setVelX(-walkingVelocity); player.setFacing(Facing.LEFT); }
 			if(Keyboard.SPACE()) if(!player.getJumping()) { player.setJumping(true); player.setVelY(-15f); }
-			if(Keyboard.E()) new ExampleObject(player.getCenter().x, player.getCenter().y, 20, 20, true);
+			if(Keyboard.E() || Keyboard.C()) new ExampleObject(player.getCenter().x, player.getCenter().y, 20, 20, true);
 			if(Keyboard.R()) engine.generateWorld();
-			if(Keyboard.F()) {
+			if(Keyboard.F() || Keyboard.V()) {
 				final float velX = player.facingLeft() ? -15 : 15;
 				new ExampleBullet(player.getCenter().x, player.getCenter().y, 40, 40, velX, 0, 75, 225, Colors.orange);
 			}
