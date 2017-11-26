@@ -10,15 +10,15 @@
 
 Physics Demonstration:
 
-![Image](https://imgur.com/3GnxNyL)
+![Image](https://i.imgur.com/3GnxNyL.gif)
 
 Lighting Demonstration:
 
-![Image](https://imgur.com/3GnxNyL)
+![Image](https://i.imgur.com/A5ZJ5PF.gif)
 
 Inventory Demonstration:
 
-![Image](https://imgur.com/3GnxNyL)
+![Image](https://i.imgur.com/XAjx4FJ.gif)
 
 --------------------------------------------------------------------------------------
 
